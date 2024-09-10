@@ -18,12 +18,11 @@ Prepare data following [MMdetection](https://github.com/open-mmlab/mmdetection).
 ```
 checkpoints/
 ├── clip_vitb32.pth
-├── res50_fpn_soco_star_400.pth
 data/
 ├── coco
 │   ├── annotations
 │   │   ├── instances_{train,val}2017.json
-│   ├── wusize
+│   ├── yichen
 │   │   ├── instances_train2017_base.json
 │   │   ├── instances_val2017_base.json
 │   │   ├── instances_val2017_novel.json
