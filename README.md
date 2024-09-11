@@ -54,20 +54,20 @@ The json file for caption supervision `captions_train2017_tags_allcaps.json` is 
 Train the detector based on FasterRCNN+ResNet50C4.
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3  python -m torch.distributed.launch --nproc_per_node=4 \
-./tools/train.py /home/think4090/cy/ovdet-main/configs/rwvm/ov_coco/baron_kd_faster_rcnn_r50_caffe_c4_90k.py --launcher pytorch
+./tools/train.py /home/think4090/cy/RWVM-main/configs/rwvm/ov_coco/rwvm_kd_faster_rcnn_r50_caffe_c4_90k.py --launcher pytorch
 ```
 #### RVM training
 Train the detector based on FasterRCNN+ResNet50C4 
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3  python -m torch.distributed.launch --nproc_per_node=4 \
-./tools/train.py /home/think4090/cy/ovdet-main/configs/rwvm/ov_coco/baron_kd_faster_rcnn_r50_caffe_c4_90k.py --launcher pytorch
+./tools/train.py /home/think4090/cy/RWVM-main/configs/rwvm/ov_coco/rwvm_kd_faster_rcnn_r50_caffe_c4_90k.py --launcher pytorch
 ```
 ### Testing
 #### OV-COCO
 The implementation based on MMDet3.x achieves better results compared to the results reported in the paper.
 To test the models, run
 ```
-python ./test.py \ 
+python ./tools/test.py \ 
 path/to/the/cfg/file path/to/the/checkpoint
 ```
 ## Acknowledgment
